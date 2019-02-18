@@ -1,0 +1,20 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" >
+
+  <table id="table">
+      <tr><td>Name</td>
+      <td><input type="text" formControlName="Name"></td></tr>
+      <tr><td>Father Name</td>
+      <td><input type="text" formControlName="FatherName"></td></tr>
+      <tr><td>Postal Address</td>
+      <td><input type="text" formControlName="PostalAddress"></td></tr>
+      <tr><td>Personal Address</td>
+      <td><input type="text" formControlName="PersonalAddress"></td></tr>
+      <tr><td>sex</td>
+      <td><input type="radio" formControlName="Male">Male</td><td><input type="radio" formControlName="FeMale"> FeMale</td></tr>
+       <tr><td><button type="reset">Reset</button></td>
+      <td><button type="submit" [disabled]="!registrationForm.valid">Submit Form</button></td></tr>
+  </table>
+
+</form>
+{{values}}
+
