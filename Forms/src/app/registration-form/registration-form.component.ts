@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import { FormControl, FormGroup, Validators} from "@angular/forms";
+
 
 @Component({
   selector: 'app-registration-form',
@@ -35,34 +36,33 @@ export class RegistrationFormComponent implements OnInit {
     PersonalAddress: new FormControl('',Validators.required),
     male:new FormControl('',Validators.required),
     female:new FormControl('',Validators.required),
-
     city:new FormControl('',Validators.required),
     course:new FormControl('',Validators.required),
     district:new FormControl('',Validators.required),
     state:new FormControl('',Validators.required),
-
     Pincode: new FormControl('',Validators.required),
     Emailid: new FormControl('',Validators.required),
     DOB: new FormControl('',Validators.required),
     MobileNo: new FormControl('',Validators.required)
 
   });
-  public values: any;
-  submitted = false;
-  get f() { return this.registrationForm.controls; }
+   submitted = false;
+   get f() { return this.registrationForm.controls; }
 
-  constructor( private fb: FormBuilder) {
+  constructor( ) {
   }
+
 
   ngOnInit() {
   }
 
 
   onSubmit() {
-  console.log(this.registrationForm.value);
     this.submitted = true;
 
     if (this.registrationForm.invalid) {
+      console.log(this.registrationForm.value);
+
       return;
     }
     alert('SUCCESS!! :-)')

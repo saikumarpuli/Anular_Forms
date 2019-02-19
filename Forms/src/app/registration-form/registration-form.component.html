@@ -2,7 +2,8 @@
 
   <table id="table">
       <tr><td>Name</td>
-      <td><input type="text" formControlName="Name" required/></td></tr>
+      <td><input type="text" formControlName="Name" required/></td>
+       </tr>
       <tr><td>Father Name</td>
       <td><input type="text" formControlName="FatherName" required></td></tr>
       <tr><td>Postal Address</td>
@@ -56,11 +57,10 @@
       <tr><td>DOB</td>
       <td><input type="date" formControlName="DOB" required></td></tr>
       <tr><td> MobileNo</td>
-      <td><input type="number" formControlName="MobileNo" required maxlength="10" pattern="/(7|8|9)\d{9}/"></td></tr>
+      <td><input type="number" formControlName="MobileNo" required ng-maxlength="10" pattern="/(7|8|9)\d{9}/"></td></tr>
       <tr><td><button type="reset">Reset</button></td>
       <td><button type="submit" >Submit Form</button></td></tr>
   </table>
 
 </form>
-{{values}}
 
