@@ -2,17 +2,63 @@
 
   <table id="table">
       <tr><td>Name</td>
-      <td><input type="text" formControlName="Name"></td></tr>
+      <td><input type="text" formControlName="Name" required/></td></tr>
       <tr><td>Father Name</td>
-      <td><input type="text" formControlName="FatherName"></td></tr>
+      <td><input type="text" formControlName="FatherName" required></td></tr>
       <tr><td>Postal Address</td>
-      <td><input type="text" formControlName="PostalAddress"></td></tr>
+      <td><input type="text" formControlName="PostalAddress" required></td></tr>
       <tr><td>Personal Address</td>
-      <td><input type="text" formControlName="PersonalAddress"></td></tr>
-      <tr><td>sex</td>
-      <td><input type="radio" formControlName="Male">Male<input type="radio" formControlName="FeMale"> FeMale</td></tr>
-       <tr><td><button type="reset">Reset</button></td>
-      <td><button type="submit" [disabled]="!registrationForm.valid">Submit Form</button></td></tr>
+      <td><input type="text" formControlName="PersonalAddress" required></td></tr>
+
+      <tr><td>sex</td>    <td><input type="radio" formControlName="male">Male
+      <input type="radio" formControlName="female">FeMale</td></tr>
+
+
+    <tr> <td>city</td><td> <select class="form-control" formControlName="city">
+      <option > </option>
+      <option *ngFor="let city of cities"
+              [value]="city">
+        {{city}}
+      </option>
+    </select></td>
+   </tr>
+
+    <tr> <td>Course</td><td> <select class="form-control" formControlName="course">
+      <option > </option>
+      <option *ngFor="let course of courses"
+              [value]="course">
+        {{course}}
+      </option>
+    </select></td>
+    </tr>
+
+    <tr> <td>District</td><td> <select class="form-control" formControlName="district">
+      <option >  </option>
+      <option *ngFor="let district of districts"
+              [value]="district">
+        {{district}}
+      </option>
+    </select></td>
+    </tr>
+
+    <tr> <td>State</td><td> <select class="form-control" formControlName="state">
+      <option > </option>
+      <option *ngFor="let state of states"
+              [value]="state">
+        {{state}}
+      </option>
+    </select></td>
+    </tr>
+      <tr><td>PinCode</td>
+      <td><input type="text" formControlName="Pincode" required></td></tr>
+      <tr><td>Emailid</td>
+      <td><input type="text" formControlName="Emailid" required></td></tr>
+      <tr><td>DOB</td>
+      <td><input type="date" formControlName="DOB" required></td></tr>
+      <tr><td> MobileNo</td>
+      <td><input type="number" formControlName="MobileNo" required maxlength="10" pattern="/(7|8|9)\d{9}/"></td></tr>
+      <tr><td><button type="reset">Reset</button></td>
+      <td><button type="submit" >Submit Form</button></td></tr>
   </table>
 
 </form>

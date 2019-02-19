@@ -1,3 +1,9 @@
- table{
-   alignment:center ;
- }
+table, td{
+  border: 1px solid black;
+
+}
+table {
+  border-collapse: collapse;
+  background-color: aqua;
+}
+
